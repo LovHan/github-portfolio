@@ -261,6 +261,29 @@
         .project-content {
             padding: 20px;
         }
+        
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--matrix-green);
+            text-decoration: none;
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: 1px solid var(--matrix-green);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .github-link:hover {
+            background: rgba(0, 255, 65, 0.1);
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .github-icon {
+            margin-right: 8px;
+            font-family: 'Courier New', monospace;
+        }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
@@ -448,6 +471,9 @@ def getAction(self, gameState):
                             <h3>Pacman Capture the Flag</h3>
                             <p>Silver Medalist (2024)</p>
                             <p>Advanced AI system using A* pathfinding and custom heuristics</p>
+                            <a href="https://github.com/LovHan/github-portfolio/tree/main/projects/pacman" class="github-link" target="_blank">
+                                <i class="github-icon">&#xe007;</i>View on GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="project-card">
@@ -462,6 +488,9 @@ def getAction(self, gameState):
                             <h3>Investment Portfolio System</h3>
                             <p>MATLAB implementation of Markowitz Portfolio Theory</p>
                             <p>Advanced mathematical modeling and optimization</p>
+                            <a href="https://github.com/LovHan/github-portfolio/tree/main/projects/investment_portfolio" class="github-link" target="_blank">
+                                <i class="github-icon">&#xe007;</i>View on GitHub
+                            </a>
                         </div>
                     </div>
                 </div>

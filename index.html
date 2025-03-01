@@ -443,24 +443,6 @@
             </div>
         </section>
 
-        <section id="code-samples" class="code-samples">
-            <div class="container">
-                <h2>Code Samples</h2>
-                <div class="code-grid">
-                    <div class="code-card">
-                        <h3>Pacman AI Agent</h3>
-                        <pre><code class="language-python">
-def getAction(self, gameState):
-    actions = gameState.getLegalActions()
-    values = [self.evaluate(gameState, a) for a in actions]
-    maxValue = max(values)
-    bestActions = [a for a, v in zip(actions, values) if v == maxValue]
-    return random.choice(bestActions)
-                        </code></pre>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section id="projects" class="projects">
             <div class="container">

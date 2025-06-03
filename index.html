@@ -262,7 +262,7 @@
             padding: 20px;
         }
         
-        .github-link {
+        .github-link, .link {
             display: inline-flex;
             align-items: center;
             color: var(--matrix-green);
@@ -274,7 +274,7 @@
             transition: all 0.3s;
         }
 
-        .github-link:hover {
+        .github-link:hover, .link:hover {
             background: rgba(0, 255, 65, 0.1);
             box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
             transform: translateY(-2px);
@@ -283,6 +283,62 @@
         .github-icon {
             margin-right: 8px;
             font-family: 'Courier New', monospace;
+        }
+
+        /* Password Info Styles */
+        .password-info {
+            background: rgba(0, 255, 65, 0.05);
+            border: 1px solid var(--matrix-green);
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .password-info p {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+            color: var(--matrix-green);
+        }
+
+        .password-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--darker-bg);
+            border: 1px solid var(--matrix-green);
+            border-radius: 4px;
+            padding: 10px 15px;
+        }
+
+        .password-text {
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            color: var(--matrix-green);
+            flex: 1;
+            user-select: all;
+            text-shadow: 0 0 5px var(--matrix-green);
+        }
+
+        .copy-btn {
+            background: transparent;
+            color: var(--matrix-green);
+            border: 1px solid var(--matrix-green);
+            border-radius: 4px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(0, 255, 65, 0.1);
+            box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+        }
+
+        .copy-btn.copied {
+            background: rgba(0, 255, 65, 0.2);
+            text-shadow: 0 0 5px var(--matrix-green);
         }
 
         /* Custom Scrollbar */
@@ -402,6 +458,52 @@
             </div>
         </section>
 
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Notable Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Pacman Capture the Flag</h3>
+                            <p>Silver Medalist (2024)</p>
+                            <p>Advanced AI system using A* pathfinding and custom heuristics</p>
+                            <a href="https://github.com/LovHan/github-portfolio/tree/main/projects/pacman" class="github-link" target="_blank">
+                                <i class="github-icon">&#xe007;</i>View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Best Before</h3>
+                            <p>Full-stack web platform for real-time gas network monitoring</p>
+                            <p>React, Django, PostgreSQL, TimeSeriesDB</p>
+                            <a href="https://tp22-bestbefore.com/" class="link" target="_blank">
+                                <i class="github-icon">&#xe007;</i>Check the Web 
+                            </a>
+                            
+                            <div class="password-info">
+                                <p><strong>Login Password:</strong></p>
+                                <div class="password-container">
+                                    <span class="password-text" id="password">tp22-BestBefore</span>
+                                    <button class="copy-btn" onclick="copyPassword()">Copy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3>Investment Portfolio System</h3>
+                            <p>MATLAB implementation of Markowitz Portfolio Theory</p>
+                            <p>Advanced mathematical modeling and optimization</p>
+                            <a href="https://github.com/LovHan/github-portfolio/tree/main/projects/investment_portfolio" class="github-link" target="_blank">
+                                <i class="github-icon">&#xe007;</i>View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="experience" class="experience">
             <div class="container">
                 <h2>Professional Experience</h2>
@@ -438,42 +540,6 @@
                             <li>Streamlined Contract Manufacturer's BOM creation process</li>
                             <li>Successfully delivered iconic lighting installations globally</li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Notable Projects</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Pacman Capture the Flag</h3>
-                            <p>Silver Medalist (2024)</p>
-                            <p>Advanced AI system using A* pathfinding and custom heuristics</p>
-                            <a href="https://github.com/LovHan/github-portfolio/tree/main/projects/pacman" class="github-link" target="_blank">
-                                <i class="github-icon">&#xe007;</i>View on GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>HuiRanqi Platform</h3>
-                            <p>Full-stack web platform for real-time gas network monitoring</p>
-                            <p>React, Django, PostgreSQL, TimeSeriesDB</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3>Investment Portfolio System</h3>
-                            <p>MATLAB implementation of Markowitz Portfolio Theory</p>
-                            <p>Advanced mathematical modeling and optimization</p>
-                            <a href="https://github.com/LovHan/github-portfolio/tree/main/projects/investment_portfolio" class="github-link" target="_blank">
-                                <i class="github-icon">&#xe007;</i>View on GitHub
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -532,6 +598,38 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
+
+        // Password copy functionality
+        function copyPassword() {
+            const passwordText = document.getElementById('password').textContent;
+            const copyBtn = document.querySelector('.copy-btn');
+            
+            navigator.clipboard.writeText(passwordText).then(() => {
+                copyBtn.textContent = 'Copied!';
+                copyBtn.classList.add('copied');
+                
+                setTimeout(() => {
+                    copyBtn.textContent = 'Copy';
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = passwordText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                copyBtn.textContent = 'Copied!';
+                copyBtn.classList.add('copied');
+                
+                setTimeout(() => {
+                    copyBtn.textContent = 'Copy';
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            });
+        }
     </script>
 </body>
 </html>
